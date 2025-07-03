@@ -1,28 +1,37 @@
-IPL Azure Pipeline:
+# IPL Azure Pipeline 
 
-An end-to-end data engineering project that processes Indian Premier League (IPL) datasets using Azure cloud services.
+An end-to-end data pipeline project to process IPL (Indian Premier League) data using Azure services. This project demonstrates how raw CSVs are transformed, analyzed, and stored efficiently across the Azure ecosystem.
 
-Overview:
+## 🚀 Project Overview
 
-This project demonstrates a complete data pipeline built on Microsoft Azure. It takes raw IPL CSV data, transforms it using Databricks (PySpark), generates insights and visualizations, and stores both the cleaned data and graphs in Azure services.
-
----
-
-Technologies Used:
-
-- Azure Blob Storage – for storing raw and processed data.
-- Azure Databricks – for data transformation and analysis using PySpark
-- Azure Cosmos DB – for storing final datasets and graph metadata
-- Python (Pandas, Matplotlib) – for data manipulation and visualization
+This pipeline performs:
+- Data Ingestion: Uploading IPL CSV files to Azure Blob Storage
+- Data Transformation: Processing using PySpark in Azure Databricks
+- Graph Generation: Creating visual insights using Matplotlib
+- Data Storage: Saving transformed data and graph metadata into Azure Cosmos DB
 
 ---
 
-Pipeline Steps:
+## 🛠 Technologies Used
 
-1. Raw IPL CSV files are uploaded to Azure Blob Storage.
-2. Azure Databricks notebooks process and transform the data using PySpark.
-3. Graphs and visualizations are generated in Databricks using Matplotlib.
-4. Graph images are saved to Azure Blob Storage.
-5. Cleaned datasets and graph metadata (image URLs) are uploaded to Cosmos DB.
+- Azure Blob Storage – for storing raw and processed files
+- Azure Databricks – for ETL using PySpark
+- Azure Cosmos DB – for final structured storage
+- Python – for scripting and visualization (`pandas`, `matplotlib`)
 
 ---
+
+## 📊 Architecture Diagram
+
+![Architecture Diagram](architecture/architecture_diagram.png)
+
+
+## ✍️ Author
+
+Bhushan R Kaashyap
+
+---
+
+## License:
+
+This project is created for educational purposes. Please contact the author for reuse or contributions.
