@@ -20,18 +20,3 @@ This pipeline performs:
 - Python – for scripting and visualization (`pandas`, `matplotlib`)
 
 ---
-
-## 📊 Architecture Diagram
-
-![Architecture Diagram](architecture/architecture_diagram.png)
-
-
-## ✍️ Author
-
-Bhushan R Kaashyap
-
----
-
-## License:
-
-This project is created for educational purposes. Please contact the author for reuse or contributions.
