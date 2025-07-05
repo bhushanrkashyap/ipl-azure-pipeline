@@ -11,6 +11,31 @@ This pipeline performs:
 - Data Storage: Saving transformed data and graph metadata into Azure Cosmos DB
 
 ---
+## Architecture diagram:
+
+                +-------------------+
+                |   CSV Datasets    |
+                +-------------------+
+                         |
+                         v
+             +-------------------------+
+             | Azure Databricks (ETL)  |
+             |  - PySpark processing   |
+             |  - Data cleaning        |
+             +-------------------------+
+                   |              |
+       Cleaned Data|              | Graphs (Matplotlib)
+                   v              v
+        +-----------------+    +----------------------+
+        | Azure Cosmos DB |    |  Azure Blob Storage  |
+        |  (5 containers) |    |    Stores images     |
+        +-----------------+    +----------------------+
+                 |                 |
+                 v                 v
+        +---------------------------------+
+        |     Cosmos DB Metadata          |
+        |   - Image metadata stored       |
+        +---------------------------------+
 
 ## 🛠 Technologies Used
 
