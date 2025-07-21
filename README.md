@@ -1,16 +1,45 @@
-# IPL Azure Pipeline 
+# IPL Azure Data Pipeline
+A scalable, end-to-end data engineering pipeline for Indian Premier League (IPL) analytics, built using Microsoft Azure services. The solution demonstrates modern data ingestion, transformation, storage, and visualization with a focus on scalability, automation, and extensibility.
 
-An end-to-end data pipeline project to process IPL (Indian Premier League) data using Azure services. This project demonstrates how raw CSVs are transformed, analyzed, and stored efficiently across the Azure ecosystem.
+# 📦 Features
 
-## 🚀 Project Overview
+Raw Data Ingestion: Upload IPL datasets (CSV) to Azure Blob Storage.
 
-This pipeline performs:
-- Data Ingestion: Uploading IPL CSV files to Azure Blob Storage
-- Data Transformation: Processing using PySpark in Azure Databricks
-- Graph Generation: Creating visual insights using Matplotlib
-- Data Storage: Saving transformed data and graph metadata into Azure Cosmos DB
+Data Transformation: Use PySpark on Azure Databricks to clean and process raw datasets.
 
----
+Data Storage: Store cleansed and transformed data in Azure Cosmos DB SQL API for structured, queryable storage.
+
+Image Storage: Visualization plots and generated artefacts are saved in Azure Blob Storage.
+
+Visualization: Create analytical graphs using Python’s Matplotlib for IPL data insights.
+
+ # 🛠️ Tech Stack
+Service/Tool	Function
+Azure Blob Storage	Raw & output data, image repository
+Azure Databricks (PySpark)	Distributed data transformation & cleaning
+Azure Cosmos DB (SQL API)	Fast, scalable NoSQL database with SQL querying
+Python (pandas, matplotlib)	Data wrangling, analysis, visualization
+
+# 🚀 Architecture Overview
+Data Upload
+
+Raw IPL CSV files are uploaded to an Azure Blob Storage container.
+
+Compute & Transform
+
+Azure Databricks reads from Blob Storage, transforms and cleanses data using PySpark.
+
+Processed data is exported as structured records.
+
+Storage
+
+Transformed datasets are written to Cosmos DB (SQL API) for scalable, queryable storage.
+
+Visualization outputs (graphs, plots) are saved as images in Blob Storage.
+
+Visualization & Analytics
+
+Python Matplotlib scripts generate insights from processed IPL data and output PNG/JPG files to Blob Storage.
 ## Architecture diagram:
 
                 +-------------------+
@@ -37,11 +66,4 @@ This pipeline performs:
         |   - Image metadata stored       |
         +---------------------------------+
 
-## 🛠 Technologies Used
 
-- Azure Blob Storage – for storing raw and processed files
-- Azure Databricks – for ETL using PySpark
-- Azure Cosmos DB – for final structured storage
-- Python – for scripting and visualization (`pandas`, `matplotlib`)
-
----
