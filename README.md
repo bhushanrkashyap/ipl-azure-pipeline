@@ -13,33 +13,21 @@ Image Storage: Visualization plots and generated artefacts are saved in Azure Bl
 
 Visualization: Create analytical graphs using Python’s Matplotlib for IPL data insights.
 
- # 🛠️ Tech Stack
-Service/Tool	Function
-Azure Blob Storage	Raw & output data, image repository
-Azure Databricks (PySpark)	Distributed data transformation & cleaning
-Azure Cosmos DB (SQL API)	Fast, scalable NoSQL database with SQL querying
-Python (pandas, matplotlib)	Data wrangling, analysis, visualization
-
 # 🚀 Architecture Overview
-Data Upload
-
+1.Data Upload:
 Raw IPL CSV files are uploaded to an Azure Blob Storage container.
 
-Compute & Transform
-
+2.Compute & Transform:
 Azure Databricks reads from Blob Storage, transforms and cleanses data using PySpark.
-
 Processed data is exported as structured records.
 
-Storage
-
+3.Storage
 Transformed datasets are written to Cosmos DB (SQL API) for scalable, queryable storage.
-
 Visualization outputs (graphs, plots) are saved as images in Blob Storage.
 
-Visualization & Analytics
-
+4.Visualization & Analytics
 Python Matplotlib scripts generate insights from processed IPL data and output PNG/JPG files to Blob Storage.
+
 ## Architecture diagram:
 
                 +-------------------+
