@@ -1,0 +1,7 @@
+pandas
+pyspark
+azure-storage-blob
+azure-cosmos
+pyarrow
+matplotlib
+python-dotenv
